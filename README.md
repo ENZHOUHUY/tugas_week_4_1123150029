@@ -22,3 +22,39 @@ Setelah project berhasil dibuat:
 Di sini kamu akan melihat apiKey.
 <br>
 Nilai apiKey ini nanti akan digunakan di Environment Postman.
+
+---
+
+# Mengaktifkan Authentication
+
+Supaya user bisa register dan login, kita perlu mengaktifkan fitur authentication.
+
+Langkahnya:
+
+1. Buka tab Authentication di Firebase.
+2. Klik Get Started.
+3. Pilih metode Email/Password.
+4. Centang Enable Email/Password.
+5. Klik Save.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
