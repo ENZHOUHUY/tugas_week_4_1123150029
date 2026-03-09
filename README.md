@@ -59,11 +59,78 @@ Langkahnya:
 | USER_EMAIL  | test@example.com | Email untuk testing  |
 | USER_PASSWORD  | Test@12345 | Password untuk testing  |
 
+---
 
+# Step 1 — Register / Membuat Akun Baru
 
+Di langkah ini kita akan membuat akun user baru menggunakan Firebase REST API.
 
+### ENDPOINT
+```bash
+POST
+https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={{FIREBASE_API_KEY}}
+```
 
+### HEADERS
 
+| Key | Value | Keterangan |
+|---------|---------|---------|
+| Content-Type  | application/json | Wajib untuk semua Firebase REST API  |
+
+### Request Body (raw JSON)
+```bash
+{
+  "email": "{{USER_EMAIL}}",
+  "password": "{{USER_PASSWORD}}",
+  "returnSecureToken": true
+}
+```
+
+### Response
+- Sukses
+```bash
+Response: 200 OK
+{
+  "kind": "identitytoolkit#SignupNewUserResponse",
+  "localId": "aBcDeFgHiJkLmN",
+  "email": "test@example.com",
+  "displayName": "",
+  "idToken": "eyJhbGciOiJSUzI1...",
+  "registered": false,
+  "refreshToken": "AMf-vBxK...",
+  "expiresIn": "3600"
+}
+```
+
+- Error
+```bash
+Response: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "EMAIL_EXISTS",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+```
+
+### Postman Test Script — Auto-save Token
+- Copy paste ke tab "Tests" di Postman agar idToken tersimpan otomatis:
+```bash
+// Postman → Tests tab:
+const json = pm.response.json();
+if (pm.response.code === 200) {
+  pm.environment.set("FIREBASE_ID_TOKEN", json.idToken);
+  pm.environment.set("FIREBASE_LOCAL_ID", json.localId);
+  pm.environment.set("FIREBASE_REFRESH_TOKEN", json.refreshToken);
+  console.log("Register sukses. UID:", json.localId);
+  console.log("PERHATIAN: Email belum diverifikasi. Lanjut ke Step 2.");
+} else {
+  console.log("Register gagal:", json.error.message);
+}
+```
+
+---
 
 
 
