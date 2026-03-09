@@ -340,6 +340,22 @@ Contoh response dari backend:
 ```
 Token ini biasanya berlaku 24 jam
 
+# Step 6 — Client Menggunakan Token Backend
+
+Setelah mendapat JWT dari backend, semua request ke backend harus memakai token tersebut.
+
+Contoh request:
+```
+GET
+/products
+```
+Header:
+```
+Authorization: Bearer BACKEND_TOKEN
+```
+Jika token valid → request berhasil.
+<br>
+Jika token tidak ada atau kadaluarsa → backend akan mengembalikan 401 Unauthorized.
 
 
 
