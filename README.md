@@ -314,7 +314,31 @@ if (pm.response.code === 200) {
 ```
 ---
 
+# Step 5 — Backend Membuat JWT Sendiri
 
+Setelah login, biasanya token Firebase akan dikirim ke backend untuk diverifikasi.
+<br>
+Jika valid, backend akan membuat JWT miliknya sendiri.
+
+Contoh response dari backend:
+```bash
+{
+  "success": true,
+  "data": {
+    "access_token": "eyJhbGciOiJIUzI1NiJ9...",
+    "token_type": "Bearer",
+    "expires_in": 86400,
+    "user": {
+      "id": 1,
+      "uid": "aBcDeFgHiJkLmN",
+      "email": "test@example.com",
+      "email_verified": true,
+      "role": "user"
+    }
+  }
+}
+```
+Token ini biasanya berlaku 24 jam
 
 
 
