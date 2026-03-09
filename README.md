@@ -191,6 +191,64 @@ if (pm.response.code === 200) {
   console.log("Gagal kirim email:", pm.response.json().error.message);
 }
 ```
+---
+
+# Step 3 — Cek Status Verifikasi Email
+
+Untuk memastikan apakah email sudah diverifikasi atau belum, kita bisa mengecek statusnya.
+
+### ENDPOINT A
+
+```bash
+POST
+https://identitytoolkit.googleapis.com/v1/accounts:lookup?key={{FIREBASE_API_KEY}}
+```
+
+### Request Body (raw JSON)
+```bash
+{
+  "idToken": "{{FIREBASE_ID_TOKEN}}"
+}
+```
+
+### Response
+- Sukses
+```bash
+Response: 200 OK (email belum verify)
+{
+  "kind": "identitytoolkit#GetAccountInfoResponse",
+  "users": [
+      {
+        "localId": "aBcDeFgHiJkLmN",
+        "email": "test@example.com",
+        "displayName": "Test User",
+        "passwordHash": "UkVEQUNURUQ=",
+        "emailVerified": false, // ← BELUM DIVERIFIKASI
+        "passwordUpdatedAt": 1700000000000,
+        "providerUserInfo": [ ... ],
+        "validSince": "1700000000",
+        "lastLoginAt": "1700000000000",
+        "createdAt": "1700000000000"
+      }
+  ]
+}
+```
+```bash
+Response: 200 OK (email verified)
+{
+  "kind": "identitytoolkit#GetAccountInfoResponse",
+  "users": [
+      {
+        "localId": "aBcDeFgHiJkLmN",
+        "email": "test@example.com",
+        "emailVerified": true, // ← SUDAH DIVERIFIKASI
+        "lastLoginAt": "1700000000000",
+        ...
+      }
+  ]
+}
+```
+
 
 
 
