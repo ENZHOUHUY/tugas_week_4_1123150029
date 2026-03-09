@@ -37,7 +37,27 @@ Langkahnya:
 4. Centang Enable Email/Password.
 5. Klik Save.
 
+---
 
+# Setup Environment di Postman
+
+Supaya tidak perlu menulis ulang data terus-menerus, kita gunakan Environment di Postman.
+
+Langkahnya:
+
+1. Buka Postman.
+2. Klik Environments di sidebar kiri.
+3. Klik tanda + (Create new environment).
+4. Tambahkan variable seperti pada tabel di bawah.
+
+| Variable | Initial Value | Keterangan |
+|---------|---------|---------|
+| FIREBASE_API_KEY  | AIzaSyB_xxx...  | Web API Key dari Firebase Console  |
+| FIREBASE_ID_TOKEN  |   | Diisi otomatis setelah login (via Test script)  |
+| BACKEND_BASE_URL  | http://localhost:8080/v1 | Base URL backend kamu  |
+| BACKEND_TOKEN  |   | Token JWT dari backend (diisi setelah verify)  |
+| USER_EMAIL  | test@example.com | Email untuk testing  |
+| USER_PASSWORD  | Test@12345 | Password untuk testing  |
 
 
 
