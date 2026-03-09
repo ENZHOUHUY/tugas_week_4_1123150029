@@ -249,7 +249,70 @@ Response: 200 OK (email verified)
 }
 ```
 
+---
 
+# Step 4 — Login dengan Email dan Password
+
+Setelah akun dibuat, user bisa login.
+
+### ENDPOINT
+```bash
+POST
+https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{FIREBASE_API_KEY}}
+```
+
+### Request Body (raw JSON)
+```bash
+{
+  "email": "{{USER_EMAIL}}",
+  "password": "{{USER_PASSWORD}}",
+  "returnSecureToken": true
+}
+```
+
+### Response
+- Sukses
+```bash
+Response: 200 OK
+{
+  "kind": "identitytoolkit#VerifyPasswordResponse",
+  "localId": "aBcDeFgHiJkLmN",
+  "email": "test@example.com",
+  "displayName": "Test User",
+  "idToken": "eyJhbGciOiJSUzI1...", // ← Firebase ID Token BARU
+  "registered": true,
+  "refreshToken": "AMf-vBxK...",
+  "expiresIn": "3600"
+}
+```
+
+- Error
+```bash
+Response: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "INVALID_PASSWORD",
+    "errors": [{ "message": "INVALID_PASSWORD", "domain": "global" }]
+  }
+}
+```
+
+### Postman Test Script — Auto-Update Token
+```bash
+// Postman → Tests tab:
+const json = pm.response.json();
+if (pm.response.code === 200) {
+  // Update environment dengan idToken BARU hasil login
+  pm.environment.set("FIREBASE_ID_TOKEN", json.idToken);
+  pm.environment.set("FIREBASE_REFRESH_TOKEN", json.refreshToken);
+  console.log("Login berhasil. Token diperbarui.");
+  console.log("Lanjut ke Step 5: kirim token ke backend.");
+} else {
+  console.log("Login gagal:", json.error.message);
+}
+```
+---
 
 
 
