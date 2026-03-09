@@ -6,3 +6,19 @@
 4. Masukkan nama project yang kamu inginkan.
 5. Klik Continue → lalu Create Project.
 6. Tunggu proses pembuatan project sampai selesai, lalu klik Continue.
+
+---
+
+# Cara Membuat App Web di Firebase
+
+Setelah project berhasil dibuat:
+
+1. Klik + Add App.
+2. Pilih Web App (ikon </>).
+3. Masukkan App Nickname (nama bebas untuk aplikasimu).
+4. Klik Register App.
+5. Setelah itu Firebase akan menampilkan konfigurasi aplikasi.
+
+Di sini kamu akan melihat apiKey.
+<br>
+Nilai apiKey ini nanti akan digunakan di Environment Postman.
