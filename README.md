@@ -7,6 +7,17 @@
 5. Klik Continue → lalu Create Project.
 6. Tunggu proses pembuatan project sampai selesai, lalu klik Continue.
 
+### Tutor
+<p align="center">
+
+  <img width="300" src="https://github.com/user-attachments/assets/12253306-bf24-4806-8d00-f4f0465564ed" />
+  <img width="300" src="https://github.com/user-attachments/assets/2ade237e-b5ca-4668-bd95-74238a4c8407" />
+  <img width="300" src="https://github.com/user-attachments/assets/6373d203-fc5d-4744-8eb3-0ca4753cdaa3" />
+  <img width="300" src="https://github.com/user-attachments/assets/0ac5ab3a-b47e-423e-acad-6a115f9d7b38" />
+  <img width="300" src="https://github.com/user-attachments/assets/8e9c830c-f320-4ed0-becb-444e182b1d02" />
+</p>
+
+
 ---
 
 # Cara Membuat App Web di Firebase
@@ -23,6 +34,17 @@ Di sini kamu akan melihat apiKey.
 <br>
 Nilai apiKey ini nanti akan digunakan di Environment Postman.
 
+### Tutor
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/07c0c3b1-3675-4709-b0f7-23773f936acb" />
+  <img width="300" src="https://github.com/user-attachments/assets/57396d6f-da6c-4af6-a977-9d25e746b476" />
+  <img width="300" src="https://github.com/user-attachments/assets/39b01352-8640-4eda-93aa-a4ef0483bf38" />
+  <img width="300" src="https://github.com/user-attachments/assets/abe47d35-6cde-4ec1-959b-7b753dddbbea" />
+
+
+  
+</p>
+
 ---
 
 # Mengaktifkan Authentication
@@ -36,6 +58,13 @@ Langkahnya:
 3. Pilih metode Email/Password.
 4. Centang Enable Email/Password.
 5. Klik Save.
+
+### Tutor
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/68fbf07f-78b6-48f2-984c-e2fb93d96ea3" />
+  <img width="300" src="https://github.com/user-attachments/assets/b39bf1b8-8fb6-4ff1-afc2-228738110049" />
+  <img width="300" src="https://github.com/user-attachments/assets/b7e5303d-7d2e-40ff-bb4d-74623302cdcd" />
+</p>
 
 ---
 
@@ -58,6 +87,11 @@ Langkahnya:
 | BACKEND_TOKEN  |   | Token JWT dari backend (diisi setelah verify)  |
 | USER_EMAIL  | test@example.com | Email untuk testing  |
 | USER_PASSWORD  | Test@12345 | Password untuk testing  |
+
+### Tutor
+<p align="center">
+  <img width="" src="https://github.com/user-attachments/assets/499155e9-3f63-4480-adf2-600d3686d9de" />
+</p>
 
 ---
 
@@ -130,6 +164,16 @@ if (pm.response.code === 200) {
 }
 ```
 
+### Tutor
+<p align="center">
+  
+  <img width="" src="https://github.com/user-attachments/assets/9368bbb1-1a88-46b8-bfed-ea596a100f91" />
+  <br>
+  <img width="" src="https://github.com/user-attachments/assets/c91f510d-b933-4ee9-a0ad-7bb43bd68b38" />
+  <br>
+  <img width="" src="https://github.com/user-attachments/assets/73705e95-f9df-42ed-b311-f198e579e2b9" />
+</p>
+
 ---
 
 # Step 2 — Kirim Email Verifikasi
@@ -191,6 +235,18 @@ if (pm.response.code === 200) {
   console.log("Gagal kirim email:", pm.response.json().error.message);
 }
 ```
+### Tutor
+<p align="center">
+
+  
+  <img width="300" src="https://github.com/user-attachments/assets/c661c205-589b-402d-969b-f602bdca0611" />
+  <img width="300" src="https://github.com/user-attachments/assets/2efab5b5-f361-4a7b-833a-d2256ca994a1" />
+  <img width="300" src="https://github.com/user-attachments/assets/cc7a720f-9c5f-41e7-b378-4df9653407e5" />
+  <img width="300" src="https://github.com/user-attachments/assets/4ab095e3-33a4-4f70-864b-2096e020beae" />
+  <img width="300" src="https://github.com/user-attachments/assets/b57d1d92-190a-42a7-bf20-4ee6dbb6fd43" />
+</p>
+
+
 ---
 
 # Step 3 — Cek Status Verifikasi Email
@@ -248,6 +304,12 @@ Response: 200 OK (email verified)
   ]
 }
 ```
+
+### Tutor
+<p align="center">
+  <img width="300" src="https://github.com/user-attachments/assets/b8563304-f7f2-4ba5-aac3-ee2fdb55da58" />
+  <img width="300" src="https://github.com/user-attachments/assets/68c7677f-16c6-4373-8240-d3fecca101de" />
+</p>
 
 ---
 
@@ -312,6 +374,15 @@ if (pm.response.code === 200) {
   console.log("Login gagal:", json.error.message);
 }
 ```
+### Tutor
+<p align="center">
+  
+  <img width="300" src="https://github.com/user-attachments/assets/be48e106-03a2-464c-aba6-a47da3d56dfe" />
+  <img width="300" src="https://github.com/user-attachments/assets/3ee411a7-05cd-4f53-891d-579d9f3878dd" />
+  <img width="300" src="https://github.com/user-attachments/assets/70291b3c-72e0-4c70-8aa9-56490f37d081" />
+</p>
+
+
 ---
 
 # Step 5 — Backend Membuat JWT Sendiri
